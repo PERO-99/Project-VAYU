@@ -78,7 +78,7 @@ export default function About() {
         </video>
         <div className="absolute inset-0 bg-[rgba(14,14,14,0.6)]" />
         <div className="relative z-10 text-center px-6">
-          <span className="text-caption text-[#C07A5F] block mb-4">ABOUT TERRA</span>
+          <span className="text-caption text-[#C07A5F] block mb-4">ABOUT VAYU</span>
           <h1 className="text-display font-display text-white mb-4">Observation as Resistance</h1>
           <p className="text-body-large text-white opacity-70 max-w-[520px] mx-auto">
             We believe that paying attention is the first act of care.
@@ -92,7 +92,7 @@ export default function About() {
             <div ref={originImgRef} className="lg:w-[45%] overflow-hidden">
               <img
                 src="/images/about-origin.jpg"
-                alt="The TERRA team in the field"
+                alt="The VAYU team in the field"
                 className="w-full object-cover"
                 style={{ aspectRatio: '3/4' }}
               />
@@ -106,7 +106,7 @@ export default function About() {
                   What if we approached climate storytelling with the same craft as the world's best editorial publications? Not louder. Not angrier. Just better considered.
                 </p>
                 <p className="text-[16px] font-light leading-[1.65] text-[#0E0E0E]">
-                  TERRA was founded in 2024 by a collective of photographers, ecologists, and designers who believe that beauty is not the enemy of urgency. That wonder can coexist with warning.
+                  VAYU was founded in 2024 by a collective of photographers, ecologists, and designers who believe that beauty is not the enemy of urgency. That wonder can coexist with warning.
                 </p>
                 <p className="text-[16px] font-light leading-[1.65] text-[#0E0E0E]">
                   We publish photo essays, field reports, and long-form features. We commission work from indigenous storytellers and early-career environmental photographers.

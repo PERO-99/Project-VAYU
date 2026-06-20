@@ -190,7 +190,7 @@ export default function Contact() {
                 <div>
                   <span className="text-caption text-[#0E0E0E] opacity-60 block mb-1">Location</span>
                   <p className="text-[16px] font-light text-[#0E0E0E] opacity-60">
-                    Based everywhere. HQ in Copenhagen.
+                    Based everywhere. HQ in Bhilai, Chhattisgarh, India.
                   </p>
                 </div>
               </div>
