@@ -1,36 +1,54 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
-  <!-- Icon Group -->
-  <g transform="translate(100, 50) scale(2)">
-    <!-- Circular Boundary/Wave background (Teal) -->
-    <path d="M50 10 A40 40 0 1 0 50 90 A40 40 0 0 0 50 10 Z" fill="none" stroke="#0E4C53" stroke-width="3" stroke-dasharray="100 150"/>
-    
-    <!-- Wind/Wave swirls (Left side) -->
-    <path d="M15 50 Q30 20 50 35 T50 70 Q30 80 15 50" fill="none" stroke="#0E4C53" stroke-width="4" stroke-linecap="round"/>
-    <path d="M25 45 Q35 30 45 40 T40 60" fill="none" stroke="#0E4C53" stroke-width="2.5" stroke-linecap="round"/>
-    <circle cx="45" cy="50" r="3" fill="#0E4C53" />
-    <circle cx="35" cy="70" r="2" fill="#0E4C53" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 130" width="100%" height="100%">
 
-    <!-- Footprint (Right side) -->
-    <path d="M60 75 C 50 65, 60 45, 65 35 C 70 25, 80 35, 75 55 C 70 75, 80 80, 60 75 Z" fill="#3D8B40"/>
-    
+  <!-- Icon: compact, centered above text -->
+  <g transform="translate(50, 8) scale(0.92)">
+
+    <!-- Outer dashed circular ring -->
+    <circle cx="50" cy="50" r="42" fill="none" stroke="#0E4C53" stroke-width="2.5" stroke-dasharray="18 10" stroke-dashoffset="5"/>
+
+    <!-- Wind / air swirl (left side) -->
+    <path d="M14 50 Q28 24 50 36 T50 68 Q30 78 14 50" fill="none" stroke="#0E4C53" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M24 46 Q36 32 47 42 T43 62" fill="none" stroke="#0E4C53" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Dot accents -->
+    <circle cx="46" cy="50" r="2.8" fill="#0E4C53"/>
+    <circle cx="36" cy="68" r="1.8" fill="#0E4C53"/>
+
+    <!-- Footprint body (right) -->
+    <path d="M60 74 C52 65, 60 46, 65 36 C70 26, 80 36, 75 55 C70 74, 80 80, 60 74 Z" fill="#3D8B40"/>
+
     <!-- Toes -->
-    <circle cx="85" cy="40" r="3" fill="#3D8B40"/>
-    <circle cx="90" cy="48" r="2.5" fill="#3D8B40"/>
-    <circle cx="93" cy="55" r="2" fill="#3D8B40"/>
-    <circle cx="94" cy="62" r="1.5" fill="#3D8B40"/>
+    <circle cx="84" cy="41" r="2.8" fill="#3D8B40"/>
+    <circle cx="89" cy="49" r="2.4" fill="#3D8B40"/>
+    <circle cx="92" cy="57" r="2.0" fill="#3D8B40"/>
+    <circle cx="93" cy="65" r="1.5" fill="#3D8B40"/>
 
-    <!-- Leaves sprouting from top of footprint -->
-    <path d="M65 35 Q 55 15 65 15 Q 70 25 65 35" fill="#58A55C"/>
-    <path d="M65 35 Q 75 20 85 25 Q 75 35 65 35" fill="#58A55C"/>
-    <path d="M75 30 Q 85 15 95 20 Q 85 30 75 30" fill="#58A55C"/>
+    <!-- Leaves from top of footprint -->
+    <path d="M65 36 Q56 16 66 16 Q71 26 65 36" fill="#58A55C"/>
+    <path d="M65 36 Q75 20 85 26 Q75 36 65 36" fill="#58A55C"/>
+    <path d="M75 30 Q86 14 96 20 Q86 30 75 30" fill="#58A55C"/>
   </g>
 
-  <!-- Text Group -->
-  <g transform="translate(200, 290)" text-anchor="middle">
-    <!-- Main VAYU text -->
-    <text x="0" y="0" font-family="-apple-system, system-ui, sans-serif" font-weight="800" font-size="64" fill="#0E4C53" letter-spacing="4">VAYU</text>
-    
-    <!-- Subtitle -->
-    <text x="0" y="30" font-family="-apple-system, system-ui, sans-serif" font-weight="700" font-size="14" fill="#0E4C53" letter-spacing="1">CARBON FOOTPRINT AWARENESS PLATFORM</text>
-  </g>
+  <!-- VAYU wordmark -->
+  <text
+    x="150" y="68"
+    font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    font-weight="800"
+    font-size="52"
+    fill="#0E4C53"
+    letter-spacing="5"
+    text-anchor="middle"
+  >VAYU</text>
+
+  <!-- Subtitle -->
+  <text
+    x="150" y="90"
+    font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+    font-weight="500"
+    font-size="9.5"
+    fill="#0E4C53"
+    letter-spacing="2.2"
+    text-anchor="middle"
+  >CARBON FOOTPRINT AWARENESS PLATFORM</text>
+
 </svg>

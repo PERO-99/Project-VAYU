@@ -293,16 +293,16 @@
     align-items: center;
     justify-content: center;
     z-index: 10;
-    /* Subtle left-edge gradient so grid bleeds into the panel naturally */
+    /* Semi-transparent frosted glass — images visible through the panel */
     background: linear-gradient(
       90deg,
       transparent 0%,
-      rgba(242,237,232,0.55) 8%,
-      rgba(242,237,232,0.88) 28%,
-      rgba(242,237,232,0.96) 55%
+      rgba(242,237,232,0.20) 6%,
+      rgba(242,237,232,0.48) 22%,
+      rgba(242,237,232,0.68) 50%
     );
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
   }
 
   .hero-text-inner {
@@ -327,8 +327,9 @@
     font-weight: 300;
     line-height: 1.65;
     color: #0E0E0E;
-    opacity: 0.72;
+    opacity: 0.9;
     margin: 0 0 0.5rem 0;
+    text-shadow: 0 1px 8px rgba(242,237,232,0.8);
   }
 
   .reveal-block {

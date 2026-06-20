@@ -114,8 +114,8 @@ export default function LivingGrid({ items, onHover }: Props) {
                 position: 'relative',
                 cursor: 'crosshair',
               }}
-              onMouseEnter={() => { pausedRef.current = true; onHover(item) }}
-              onMouseLeave={() => { pausedRef.current = false; onHover(null) }}
+              onMouseEnter={() => { onHover(item) }}
+              onMouseLeave={() => { onHover(null) }}
             >
               <span style={{
                 position: 'absolute',
