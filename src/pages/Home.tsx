@@ -48,15 +48,14 @@ export default function Home() {
 
       ctx = gsap.context(() => {
 
-        // ─── HERO OVERLAY: fade out on scroll ────────────────────────────
+        // ─── HERO PANEL: fade out on scroll ──────────────────────────────
         gsap.to('.hero-text-overlay', {
-          y: -60,
           opacity: 0,
           ease: 'none',
           scrollTrigger: {
             trigger: '.hero-section',
             start: 'top top',
-            end: '60% top',
+            end: '50% top',
             scrub: 1,
           },
         })
@@ -220,16 +219,29 @@ export default function Home() {
     setActiveTitle(item?.title ?? null)
   }
 
+  const caption = activeCaption || 'Carbon Footprint Awareness Platform'
+  const title = activeTitle || 'VAYU'
 
   return (
     <main>
-      {/* ── HERO: full-width grid + blurry overlay on right ── */}
-      <section className="hero-section relative w-full overflow-hidden" style={{ height: '100vh' }}>
-        {/* Full-width image grid */}
-        <LivingGrid items={GRID_ITEMS} onHover={handleGridHover} />
+      {/* ── HERO: left 60% scrolling grid + right 40% frosted panel ── */}
+      <section className="hero-section relative w-full overflow-hidden" style={{ height: '100vh', display: 'flex' }}>
 
-        {/* Blurry overlay panel — right side */}
-        <div className="hero-text-overlay">
+        {/* LEFT: scrolling image grid — 60% width */}
+        <div className="relative overflow-hidden flex-shrink-0" style={{ width: '60%' }}>
+          <LivingGrid items={GRID_ITEMS} onHover={handleGridHover} />
+
+          {/* Hover label shown over the grid on mouse over */}
+          {activeTitle && (
+            <div className="absolute bottom-8 left-6 z-20 pointer-events-none">
+              <p className="text-caption text-white" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.8)' }}>{activeCaption}</p>
+              <p className="text-white font-display" style={{ fontSize: 'clamp(18px,2vw,28px)', textShadow: '0 2px 8px rgba(0,0,0,0.7)' }}>{activeTitle}</p>
+            </div>
+          )}
+        </div>
+
+        {/* RIGHT: frosted glass branding panel — 40% width */}
+        <div className="hero-text-overlay" style={{ position: 'relative', width: '40%', flex: '0 0 40%' }}>
           <div className="hero-text-inner">
             <h1 className="sr-only">VAYU — Carbon Footprint Awareness Platform</h1>
             <img src="/vayu-logo-full.svg" alt="VAYU" className="hero-logo" />
@@ -242,13 +254,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Hover title shown on left side when grid tile hovered */}
-        {activeTitle && (
-          <div className="absolute bottom-8 left-6 z-20 pointer-events-none">
-            <p className="text-caption text-white" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.8)' }}>{activeCaption}</p>
-            <p className="text-white font-display" style={{ fontSize: 'clamp(18px,2vw,28px)', textShadow: '0 2px 8px rgba(0,0,0,0.7)' }}>{activeTitle}</p>
-          </div>
-        )}
       </section>
 
       {/* ── BRIEFING + DARK PANEL (single pinned container) ── */}
@@ -318,19 +323,19 @@ export default function Home() {
 
         {/* TOP-LEFT: two images side-by-side */}
         <img src="/images/home-community-1.jpg" alt="" className="mission-deco absolute object-cover rounded" style={{ opacity: 0, width: '12vw', height: '9vw', top: '4%', left: '2%' }} />
-        <img src="/images/home-deco-1.jpg"      alt="" className="mission-deco absolute object-cover rounded" style={{ opacity: 0, width: '9vw',  height: '9vw', top: '4%', left: '15%' }} />
+        <img src="/images/home-deco-1.jpg" alt="" className="mission-deco absolute object-cover rounded" style={{ opacity: 0, width: '9vw', height: '9vw', top: '4%', left: '15%' }} />
 
         {/* TOP-RIGHT: two images side-by-side */}
-        <img src="/images/home-deco-3.jpg"      alt="" className="mission-deco absolute object-cover rounded" style={{ opacity: 0, width: '9vw',  height: '9vw', top: '4%', right: '15%' }} />
-        <img src="/images/hero-grid-3.jpg"      alt="" className="mission-deco absolute object-cover rounded" style={{ opacity: 0, width: '12vw', height: '9vw', top: '4%', right: '2%' }} />
+        <img src="/images/home-deco-3.jpg" alt="" className="mission-deco absolute object-cover rounded" style={{ opacity: 0, width: '9vw', height: '9vw', top: '4%', right: '15%' }} />
+        <img src="/images/hero-grid-3.jpg" alt="" className="mission-deco absolute object-cover rounded" style={{ opacity: 0, width: '12vw', height: '9vw', top: '4%', right: '2%' }} />
 
         {/* BOTTOM-LEFT: two images side-by-side */}
-        <img src="/images/home-deco-2.jpg"      alt="" className="mission-deco absolute object-cover rounded" style={{ opacity: 0, width: '9vw',  height: '9vw', bottom: '4%', left: '2%' }} />
-        <img src="/images/home-stories-1.jpg"   alt="" className="mission-deco absolute object-cover rounded" style={{ opacity: 0, width: '12vw', height: '9vw', bottom: '4%', left: '12%' }} />
+        <img src="/images/home-deco-2.jpg" alt="" className="mission-deco absolute object-cover rounded" style={{ opacity: 0, width: '9vw', height: '9vw', bottom: '4%', left: '2%' }} />
+        <img src="/images/home-stories-1.jpg" alt="" className="mission-deco absolute object-cover rounded" style={{ opacity: 0, width: '12vw', height: '9vw', bottom: '4%', left: '12%' }} />
 
         {/* BOTTOM-RIGHT: two images side-by-side */}
         <img src="/images/home-community-2.jpg" alt="" className="mission-deco absolute object-cover rounded" style={{ opacity: 0, width: '12vw', height: '9vw', bottom: '4%', right: '12%' }} />
-        <img src="/images/hero-grid-6.jpg"      alt="" className="mission-deco absolute object-cover rounded" style={{ opacity: 0, width: '9vw',  height: '9vw', bottom: '4%', right: '2%' }} />
+        <img src="/images/hero-grid-6.jpg" alt="" className="mission-deco absolute object-cover rounded" style={{ opacity: 0, width: '9vw', height: '9vw', bottom: '4%', right: '2%' }} />
 
         {/* Ghost text watermarks */}
         <span className="mission-text-deco absolute text-display-xl text-transparent pointer-events-none select-none" style={{ WebkitTextStroke: '1px rgba(255,255,255,0.2)', left: '10vw', top: '15%', opacity: 0 }}>WHAT</span>

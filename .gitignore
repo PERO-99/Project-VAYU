@@ -7,19 +7,31 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Dependencies and build
 node_modules
 dist
 dist-ssr
 *.local
+
+# Environment secrets — NEVER commit these
 .env
 .env.*
 !.env.example
+
+# Internal session / conversation files
+chat_history.txt
+info.md
+transition_summary.md
+test-key.js
+test-contact.js
+register-key.js
 
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
 .idea
 .DS_Store
+Thumbs.db
 *.suo
 *.ntvs*
 *.njsproj

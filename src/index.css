@@ -282,33 +282,28 @@
     margin-top: 12px;
   }
 
-  /* ─── HERO OVERLAY (blurry frosted glass, right side) ─── */
+  /* ─── HERO OVERLAY (frosted glass right panel) ─── */
   .hero-text-overlay {
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 44%;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: linear-gradient(90deg, rgba(242,237,232,0.82) 0%, rgba(242,237,232,0.97) 40%);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
     z-index: 10;
-    background: linear-gradient(90deg, transparent 0%, rgba(242,237,232,0.78) 18%, rgba(242,237,232,0.95) 48%);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
   }
 
   .hero-text-inner {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 0 clamp(24px, 5vw, 64px);
+    padding: 0 clamp(32px, 5vw, 72px);
     width: 100%;
-    max-width: 420px;
+    max-width: 440px;
   }
 
   .hero-logo {
-    width: clamp(120px, 22vw, 260px);
+    width: clamp(140px, 18vw, 260px);
     height: auto;
     object-fit: contain;
     display: block;
@@ -316,7 +311,7 @@
   }
 
   .hero-tagline {
-    font-size: clamp(16px, 1.5vw, 22px);
+    font-size: clamp(18px, 1.6vw, 24px);
     font-weight: 300;
     line-height: 1.65;
     color: #0E0E0E;
