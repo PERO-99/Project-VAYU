@@ -224,24 +224,14 @@ export default function Home() {
 
   return (
     <main>
-      {/* ── HERO: left 60% scrolling grid + right 40% frosted panel ── */}
-      <section className="hero-section relative w-full overflow-hidden" style={{ height: '100vh', display: 'flex' }}>
+      {/* ── HERO: full-width grid + blurry overlay absolutely on the right ── */}
+      <section className="hero-section relative w-full overflow-hidden" style={{ height: '100vh' }}>
 
-        {/* LEFT: scrolling image grid — 60% width */}
-        <div className="relative overflow-hidden flex-shrink-0" style={{ width: '60%' }}>
-          <LivingGrid items={GRID_ITEMS} onHover={handleGridHover} />
+        {/* Grid covers the FULL hero width so images show through the overlay blur */}
+        <LivingGrid items={GRID_ITEMS} onHover={handleGridHover} />
 
-          {/* Hover label shown over the grid on mouse over */}
-          {activeTitle && (
-            <div className="absolute bottom-8 left-6 z-20 pointer-events-none">
-              <p className="text-caption text-white" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.8)' }}>{activeCaption}</p>
-              <p className="text-white font-display" style={{ fontSize: 'clamp(18px,2vw,28px)', textShadow: '0 2px 8px rgba(0,0,0,0.7)' }}>{activeTitle}</p>
-            </div>
-          )}
-        </div>
-
-        {/* RIGHT: frosted glass branding panel — 40% width */}
-        <div className="hero-text-overlay" style={{ position: 'relative', width: '40%', flex: '0 0 40%' }}>
+        {/* Frosted glass panel: ABSOLUTE on the right, sits on top of the grid images */}
+        <div className="hero-text-overlay">
           <div className="hero-text-inner">
             <h1 className="sr-only">VAYU — Carbon Footprint Awareness Platform</h1>
             <img src="/vayu-logo-full.svg" alt="VAYU" className="hero-logo" />
@@ -253,6 +243,14 @@ export default function Home() {
             </Link>
           </div>
         </div>
+
+        {/* Hover label over grid on mouse */}
+        {activeTitle && (
+          <div className="absolute bottom-8 left-6 z-20 pointer-events-none">
+            <p className="text-caption text-white" style={{ textShadow: '0 1px 4px rgba(0,0,0,0.8)' }}>{activeCaption}</p>
+            <p className="text-white font-display" style={{ fontSize: 'clamp(18px,2vw,28px)', textShadow: '0 2px 8px rgba(0,0,0,0.7)' }}>{activeTitle}</p>
+          </div>
+        )}
 
       </section>
 
@@ -314,28 +312,32 @@ export default function Home() {
           <h2 className="text-h1 font-display text-white">of Earth's living systems</h2>
         </div>
 
-        {/* Labels */}
-        <span className="mission-deco text-caption text-white absolute top-8 left-8" style={{ opacity: 0 }}>Since 2024</span>
-        <span className="mission-deco text-caption text-white absolute top-8 right-8" style={{ opacity: 0 }}>24.7741° N, 122.4532° W</span>
-        <span className="mission-deco text-caption text-white absolute bottom-8 left-1/2 -translate-x-1/2" style={{ opacity: 0 }}>Nature Reserve</span>
+        {/* Corner labels — far from center text bands */}
+        <span className="mission-deco text-caption text-white absolute" style={{ opacity: 0, top: '6%', left: '2%' }}>Since 2024</span>
+        <span className="mission-deco text-caption text-white absolute" style={{ opacity: 0, top: '6%', right: '2%' }}>24.7741° N, 122.4532° W</span>
+        <span className="mission-deco text-caption text-white absolute" style={{ opacity: 0, bottom: '6%', left: '50%', transform: 'translateX(-50%)' }}>Nature Reserve</span>
 
-        {/* ── 4-corner photo clusters ── each pair is side-by-side so they never overlap ── */}
+        {/* ── One photo per corner, each hugging the screen edge ── */}
 
-        {/* TOP-LEFT: two images side-by-side */}
-        <img src="/images/home-community-1.jpg" alt="" className="mission-deco absolute object-cover rounded" style={{ opacity: 0, width: '12vw', height: '9vw', top: '4%', left: '2%' }} />
-        <img src="/images/home-deco-1.jpg" alt="" className="mission-deco absolute object-cover rounded" style={{ opacity: 0, width: '9vw', height: '9vw', top: '4%', left: '15%' }} />
+        {/* TOP-LEFT */}
+        <img src="/images/home-community-1.jpg" alt=""
+          className="mission-deco absolute object-cover rounded-lg"
+          style={{ opacity: 0, width: '11vw', aspectRatio: '4/3', top: '10%', left: '1.5%' }} />
 
-        {/* TOP-RIGHT: two images side-by-side */}
-        <img src="/images/home-deco-3.jpg" alt="" className="mission-deco absolute object-cover rounded" style={{ opacity: 0, width: '9vw', height: '9vw', top: '4%', right: '15%' }} />
-        <img src="/images/hero-grid-3.jpg" alt="" className="mission-deco absolute object-cover rounded" style={{ opacity: 0, width: '12vw', height: '9vw', top: '4%', right: '2%' }} />
+        {/* TOP-RIGHT */}
+        <img src="/images/hero-grid-3.jpg" alt=""
+          className="mission-deco absolute object-cover rounded-lg"
+          style={{ opacity: 0, width: '11vw', aspectRatio: '4/3', top: '10%', right: '1.5%' }} />
 
-        {/* BOTTOM-LEFT: two images side-by-side */}
-        <img src="/images/home-deco-2.jpg" alt="" className="mission-deco absolute object-cover rounded" style={{ opacity: 0, width: '9vw', height: '9vw', bottom: '4%', left: '2%' }} />
-        <img src="/images/home-stories-1.jpg" alt="" className="mission-deco absolute object-cover rounded" style={{ opacity: 0, width: '12vw', height: '9vw', bottom: '4%', left: '12%' }} />
+        {/* BOTTOM-LEFT */}
+        <img src="/images/home-deco-2.jpg" alt=""
+          className="mission-deco absolute object-cover rounded-lg"
+          style={{ opacity: 0, width: '11vw', aspectRatio: '4/3', bottom: '10%', left: '1.5%' }} />
 
-        {/* BOTTOM-RIGHT: two images side-by-side */}
-        <img src="/images/home-community-2.jpg" alt="" className="mission-deco absolute object-cover rounded" style={{ opacity: 0, width: '12vw', height: '9vw', bottom: '4%', right: '12%' }} />
-        <img src="/images/hero-grid-6.jpg" alt="" className="mission-deco absolute object-cover rounded" style={{ opacity: 0, width: '9vw', height: '9vw', bottom: '4%', right: '2%' }} />
+        {/* BOTTOM-RIGHT */}
+        <img src="/images/hero-grid-6.jpg" alt=""
+          className="mission-deco absolute object-cover rounded-lg"
+          style={{ opacity: 0, width: '11vw', aspectRatio: '4/3', bottom: '10%', right: '1.5%' }} />
 
         {/* Ghost text watermarks */}
         <span className="mission-text-deco absolute text-display-xl text-transparent pointer-events-none select-none" style={{ WebkitTextStroke: '1px rgba(255,255,255,0.2)', left: '10vw', top: '15%', opacity: 0 }}>WHAT</span>

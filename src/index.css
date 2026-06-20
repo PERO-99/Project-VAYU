@@ -284,13 +284,25 @@
 
   /* ─── HERO OVERLAY (frosted glass right panel) ─── */
   .hero-text-overlay {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 42%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(90deg, rgba(242,237,232,0.82) 0%, rgba(242,237,232,0.97) 40%);
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
     z-index: 10;
+    /* Subtle left-edge gradient so grid bleeds into the panel naturally */
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(242,237,232,0.55) 8%,
+      rgba(242,237,232,0.88) 28%,
+      rgba(242,237,232,0.96) 55%
+    );
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
   }
 
   .hero-text-inner {
