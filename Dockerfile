@@ -4,11 +4,13 @@ COPY package*.json ./
 RUN npm ci
 COPY . .
 
-# Set placeholder values during the build phase so Vite embeds these specific strings into the JS files
+# Set actual values for public frontend variables during build
+ENV VITE_CONTACT_EMAIL="manjeetk7979@gmail.com"
+ENV VITE_INSTAGRAM_URL="https://www.instagram.com/manjeet_91101?igsh=MTJmdDJ2YzBrODV1dA=="
+ENV VITE_WEB3FORMS_KEY="247811a3-ec60-4e96-9643-7274f306c4e9"
+
+# Keep Gemini key as a placeholder to protect it from GitHub scanners
 ENV VITE_GEMINI_API_KEY=VITE_GEMINI_API_KEY_PLACEHOLDER
-ENV VITE_CONTACT_EMAIL=VITE_CONTACT_EMAIL_PLACEHOLDER
-ENV VITE_INSTAGRAM_URL=VITE_INSTAGRAM_URL_PLACEHOLDER
-ENV VITE_WEB3FORMS_KEY=VITE_WEB3FORMS_KEY_PLACEHOLDER
 
 RUN npm run build
 
