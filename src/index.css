@@ -12,9 +12,9 @@
     --stone: #A69F97;
     --clay: #C07A5F;
     --pure-white: #FFFFFF;
-    --border-light: rgba(14,14,14,0.12);
-    --border-dark: rgba(242,237,232,0.15);
-    --overlay: rgba(14,14,14,0.65);
+    --border-light: rgba(14, 14, 14, 0.12);
+    --border-dark: rgba(242, 237, 232, 0.15);
+    --overlay: rgba(14, 14, 14, 0.65);
 
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
@@ -212,7 +212,7 @@
     left: 8px;
     font-size: 11px;
     color: white;
-    text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
     opacity: 0;
     transition: opacity 0.3s ease;
     pointer-events: none;
@@ -231,7 +231,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(14,14,14,0.65);
+    background: rgba(14, 14, 14, 0.65);
     backdrop-filter: blur(12px);
     opacity: 0;
     pointer-events: none;
@@ -294,13 +294,11 @@
     justify-content: center;
     z-index: 10;
     /* Semi-transparent frosted glass — images visible through the panel */
-    background: linear-gradient(
-      90deg,
-      transparent 0%,
-      rgba(242,237,232,0.20) 6%,
-      rgba(242,237,232,0.48) 22%,
-      rgba(242,237,232,0.68) 50%
-    );
+    background: linear-gradient(90deg,
+        transparent 0%,
+        rgba(242, 237, 232, 0.20) 6%,
+        rgba(242, 237, 232, 0.48) 22%,
+        rgba(242, 237, 232, 0.68) 50%);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
   }
@@ -315,21 +313,21 @@
   }
 
   .hero-logo {
-    width: clamp(200px, 28vw, 380px);
+    width: clamp(140px, 18vw, 260px);
     height: auto;
     object-fit: contain;
     display: block;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
 
   .hero-tagline {
-    font-size: clamp(24px, 2.2vw, 32px);
-    font-weight: 400;
-    line-height: 1.5;
+    font-size: clamp(18px, 1.6vw, 24px);
+    font-weight: 300;
+    line-height: 1.65;
     color: #0E0E0E;
-    opacity: 0.95;
-    margin: 0 0 1rem 0;
-    text-shadow: 0 1px 8px rgba(242,237,232,0.9);
+    opacity: 0.9;
+    margin: 0 0 0.5rem 0;
+    text-shadow: 0 1px 8px rgba(242, 237, 232, 0.8);
   }
 
   .reveal-block {
@@ -370,7 +368,7 @@
     position: absolute;
     left: 0;
     top: 0;
-    color: rgba(255,255,255,0.15);
+    color: rgba(255, 255, 255, 0.15);
     backface-visibility: hidden;
     transform: rotateX(0);
     opacity: 1;
@@ -381,7 +379,8 @@
     overflow: hidden;
     height: 1.4em;
     vertical-align: bottom;
-    position: relative; /* required for absolute-positioned children */
+    position: relative;
+    /* required for absolute-positioned children */
   }
 
   .accent-word {
@@ -403,7 +402,7 @@
     display: none;
   }
 
-  .horizontal-scroll > * {
+  .horizontal-scroll>* {
     scroll-snap-align: start;
     flex-shrink: 0;
   }
@@ -423,9 +422,9 @@
     will-change: transform;
     pointer-events: none;
     box-shadow:
-      inset -40px -20px 80px rgba(0,0,0,0.6),
-      0 0 120px rgba(192,122,95,0.15);
-    border: 1px solid rgba(255,255,255,0.05);
+      inset -40px -20px 80px rgba(0, 0, 0, 0.6),
+      0 0 120px rgba(192, 122, 95, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.05);
   }
 
   .explore-earth {
@@ -442,10 +441,10 @@
     will-change: transform;
     pointer-events: none;
     box-shadow:
-      inset -60px -30px 100px rgba(0,0,0,0.7),
-      inset 20px 20px 60px rgba(74,93,67,0.3),
-      0 0 160px rgba(74,93,67,0.15);
-    border: 1px solid rgba(255,255,255,0.06);
+      inset -60px -30px 100px rgba(0, 0, 0, 0.7),
+      inset 20px 20px 60px rgba(74, 93, 67, 0.3),
+      0 0 160px rgba(74, 93, 67, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.06);
     z-index: 0;
   }
 
@@ -453,13 +452,13 @@
     position: absolute;
     inset: 0;
     background-image:
-      radial-gradient(1px 1px at 10% 15%, rgba(255,255,255,0.6) 0%, transparent 100%),
-      radial-gradient(1px 1px at 30% 55%, rgba(255,255,255,0.4) 0%, transparent 100%),
-      radial-gradient(1.5px 1.5px at 60% 20%, rgba(255,255,255,0.5) 0%, transparent 100%),
-      radial-gradient(1px 1px at 80% 70%, rgba(255,255,255,0.3) 0%, transparent 100%),
-      radial-gradient(1px 1px at 45% 85%, rgba(255,255,255,0.4) 0%, transparent 100%),
-      radial-gradient(1.5px 1.5px at 90% 10%, rgba(255,255,255,0.6) 0%, transparent 100%),
-      radial-gradient(1px 1px at 20% 90%, rgba(255,255,255,0.3) 0%, transparent 100%);
+      radial-gradient(1px 1px at 10% 15%, rgba(255, 255, 255, 0.6) 0%, transparent 100%),
+      radial-gradient(1px 1px at 30% 55%, rgba(255, 255, 255, 0.4) 0%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 60% 20%, rgba(255, 255, 255, 0.5) 0%, transparent 100%),
+      radial-gradient(1px 1px at 80% 70%, rgba(255, 255, 255, 0.3) 0%, transparent 100%),
+      radial-gradient(1px 1px at 45% 85%, rgba(255, 255, 255, 0.4) 0%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 90% 10%, rgba(255, 255, 255, 0.6) 0%, transparent 100%),
+      radial-gradient(1px 1px at 20% 90%, rgba(255, 255, 255, 0.3) 0%, transparent 100%);
     pointer-events: none;
     z-index: 0;
   }
@@ -515,8 +514,15 @@
   }
 
   @keyframes orbFloat {
-    0%, 100% { transform: translateY(0px) scale(1); }
-    50% { transform: translateY(-30px) scale(1.05); }
+
+    0%,
+    100% {
+      transform: translateY(0px) scale(1);
+    }
+
+    50% {
+      transform: translateY(-30px) scale(1.05);
+    }
   }
 
   .gemini-messages {
@@ -556,17 +562,17 @@
   }
 
   .gemini-bubble-model {
-    background: rgba(255,255,255,0.05);
-    color: rgba(255,255,255,0.88);
-    border: 1px solid rgba(255,255,255,0.08);
+    background: rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.88);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 4px 16px 16px 16px;
   }
 
   .gemini-bubble-user {
-    background: linear-gradient(135deg, rgba(74,93,67,0.8), rgba(74,93,67,0.5));
-    color: rgba(255,255,255,0.9);
+    background: linear-gradient(135deg, rgba(74, 93, 67, 0.8), rgba(74, 93, 67, 0.5));
+    color: rgba(255, 255, 255, 0.9);
     border-radius: 16px 4px 16px 16px;
-    border: 1px solid rgba(74,93,67,0.3);
+    border: 1px solid rgba(74, 93, 67, 0.3);
   }
 
   .gemini-typing {
@@ -580,23 +586,38 @@
     width: 7px;
     height: 7px;
     border-radius: 50%;
-    background: rgba(255,255,255,0.4);
+    background: rgba(255, 255, 255, 0.4);
     animation: typingDot 1.4s ease-in-out infinite;
   }
 
-  .gemini-typing span:nth-child(2) { animation-delay: 0.2s; }
-  .gemini-typing span:nth-child(3) { animation-delay: 0.4s; }
+  .gemini-typing span:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+
+  .gemini-typing span:nth-child(3) {
+    animation-delay: 0.4s;
+  }
 
   @keyframes typingDot {
-    0%, 80%, 100% { opacity: 0.3; transform: scale(0.8); }
-    40% { opacity: 1; transform: scale(1.1); }
+
+    0%,
+    80%,
+    100% {
+      opacity: 0.3;
+      transform: scale(0.8);
+    }
+
+    40% {
+      opacity: 1;
+      transform: scale(1.1);
+    }
   }
 
   .gemini-suggestion {
     text-align: left;
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.1);
-    color: rgba(255,255,255,0.7);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.7);
     border-radius: 12px;
     padding: 14px 18px;
     font-size: 14px;
@@ -607,9 +628,9 @@
   }
 
   .gemini-suggestion:hover {
-    background: rgba(74,93,67,0.25);
-    border-color: rgba(74,93,67,0.5);
-    color: rgba(255,255,255,0.9);
+    background: rgba(74, 93, 67, 0.25);
+    border-color: rgba(74, 93, 67, 0.5);
+    color: rgba(255, 255, 255, 0.9);
     transform: translateX(4px);
   }
 
@@ -617,8 +638,8 @@
     display: flex;
     align-items: flex-end;
     gap: 12px;
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.12);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 16px;
     padding: 12px 16px;
     margin-top: 16px;
@@ -626,7 +647,7 @@
   }
 
   .gemini-input-wrap:focus-within {
-    border-color: rgba(74,93,67,0.6);
+    border-color: rgba(74, 93, 67, 0.6);
   }
 
   .gemini-input {
@@ -644,7 +665,7 @@
   }
 
   .gemini-input::placeholder {
-    color: rgba(255,255,255,0.3);
+    color: rgba(255, 255, 255, 0.3);
   }
 
   .gemini-input::-webkit-scrollbar {
@@ -678,21 +699,57 @@
 }
 
 @layer utilities {
-  .text-canvas { color: var(--canvas); }
-  .text-ink { color: var(--ink); }
-  .text-earth { color: var(--earth); }
-  .text-stone { color: var(--stone); }
-  .text-clay { color: var(--clay); }
-  .text-pure-white { color: var(--pure-white); }
+  .text-canvas {
+    color: var(--canvas);
+  }
 
-  .bg-canvas { background-color: var(--canvas); }
-  .bg-ink { background-color: var(--ink); }
-  .bg-earth { background-color: var(--earth); }
-  .bg-stone { background-color: var(--stone); }
-  .bg-clay { background-color: var(--clay); }
+  .text-ink {
+    color: var(--ink);
+  }
 
-  .border-light { border-color: var(--border-light); }
-  .border-dark { border-color: var(--border-dark); }
+  .text-earth {
+    color: var(--earth);
+  }
+
+  .text-stone {
+    color: var(--stone);
+  }
+
+  .text-clay {
+    color: var(--clay);
+  }
+
+  .text-pure-white {
+    color: var(--pure-white);
+  }
+
+  .bg-canvas {
+    background-color: var(--canvas);
+  }
+
+  .bg-ink {
+    background-color: var(--ink);
+  }
+
+  .bg-earth {
+    background-color: var(--earth);
+  }
+
+  .bg-stone {
+    background-color: var(--stone);
+  }
+
+  .bg-clay {
+    background-color: var(--clay);
+  }
+
+  .border-light {
+    border-color: var(--border-light);
+  }
+
+  .border-dark {
+    border-color: var(--border-dark);
+  }
 }
 
 @media (max-width: 768px) {
@@ -717,7 +774,7 @@
     top: auto;
     bottom: 0;
     height: 60%;
-    background: linear-gradient(180deg, transparent 0%, rgba(242,237,232,0.88) 28%, rgba(242,237,232,0.97) 60%);
+    background: linear-gradient(180deg, transparent 0%, rgba(242, 237, 232, 0.88) 28%, rgba(242, 237, 232, 0.97) 60%);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     align-items: flex-end;
